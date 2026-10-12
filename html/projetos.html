@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos - Experiência Prática Front-End</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app">
+    <div class="view-content">
+      <h1>Histórico de Projetos Realizados</h1>
+      <p>Conheça abaixo alguns dos principais sistemas desenvolvidos recentemente:</p>
+      
+      <!-- Grid de Projetos Exemplo -->
+      <div class="projetos-grid">
+        <div class="projeto-card">
+          <h3>Sistema SPA Modular</h3>
+          <p>Aplicação front-end baseada em componentes com roteamento dinâmico via hash e ES Modules.</p>
+        </div>
+        <div class="projeto-card">
+          <h3>Controle de Qualidade PLC</h3>
+          <p>Interface web integrada para monitoramento de sistemas industriais Siemens S7 e tratamento de imagem.</p>
+        </div>
+        <div class="projeto-card">
+          <h3>Gestão de Tarefas Local</h3>
+          <p>Sistema de armazenamento local com persistência de dados em JSON e validação avançada de formulários.</p>
+        </div>
+      </div>
+
+      <div id="lista-dados-salvos" style="margin-top: 2rem;">
+        <!-- Dados salvos do localStorage injetados aqui se houver -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Desenvolvimento Front-End</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

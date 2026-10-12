@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Experiência Prática Front-End</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Container gerador de reatividade e persistência ao reabrir o navegador -->
+  <main id="app">
+    <div class="view-content">
+      <h1>Registo de Utilizador</h1>
+      <form id="form-cadastro">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" required placeholder="Digite o seu nome">
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required placeholder="Digite o seu e-mail">
+        
+        <button type="submit">Guardar Dados</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Desenvolvimento Front-End</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
