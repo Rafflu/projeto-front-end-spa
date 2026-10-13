@@ -8,14 +8,19 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html#inicio">Início</a></li>
+  <header role="banner">
+    <nav aria-label="Navegação Principal">
+        <ul>
+        <li><a href="index.html#inicio" aria-current="page">Início</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
         <li><a href="projetos.html">Projetos</a></li>
-      </ul>
+        </ul>
     </nav>
+    
+    <!-- Botão de Alternância de Tema Acessível -->
+    <button id="theme-toggle" class="theme-toggle-btn" aria-pressed="false" aria-label="Alternar entre modo claro e escuro">
+        🌓 <span aria-hidden="true">Tema</span>
+    </button>
   </header>
 
   <main id="app">

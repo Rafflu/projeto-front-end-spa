@@ -1,31 +1,54 @@
 /* ==========================================
    STYLE CSS - Layout Principal e Componentes
    ========================================== */
+
+:root {
+  --primary-color: #0d3b66;
+  --text-color: #1a1a1a;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --focus-ring: #0056b3;
+  --border-color: #4a5568;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #0d3b66;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 nav ul {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: #f4d35e;
   font-weight: bold;
+  text-decoration: none;
   transition: color 0.2s;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
   color: #fff;
 }
 
@@ -35,19 +58,19 @@ main#app {
   width: 100%;
   margin: 2rem auto;
   padding: 2rem;
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .view-content h1 {
-  color: #0d3b66;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
 
 .view-content p {
-  color: #555;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
 }
 
@@ -60,14 +83,16 @@ form {
 
 form label {
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 form input {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   width: 100%;
+  background: var(--card-bg);
+  color: var(--text-color);
 }
 
 form button {
@@ -76,6 +101,8 @@ form button {
   padding: 0.75rem;
   font-weight: bold;
   border-radius: 4px;
+  border: none;
+  cursor: pointer;
   transition: background-color 0.2s;
   margin-top: 1rem;
 }
@@ -87,7 +114,7 @@ form button:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #0d3b66;
+  background-color: var(--primary-color);
   color: #fff;
   font-size: 0.9rem;
 }
@@ -98,11 +125,13 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
 }
 
 .projeto-card {
-  background: #ffffff;
-  border: 1px solid #e1e4e8;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
@@ -115,13 +144,54 @@ footer {
 }
 
 .projeto-card h3 {
-  color: #0d3b66;
-  margin-bottom: 0.5srem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
 .projeto-card p {
-  color: #666;
+  color: var(--text-color);
   font-size: 0.95rem;
   margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Modo Escuro / Alto Contraste (Dark Theme)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --primary-color: #4da8da;
+  --text-color: #f1f1f1;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --focus-ring: #64b5f6;
+  --border-color: #757575;
+}
+
+/* Botão de Alternância de Tema (Canto Superior Direito) */
+.theme-toggle-btn {
+  background: transparent;
+  border: 2px solid #f4d35e;
+  color: #f4d35e;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #f4d35e;
+  color: #0d3b66;
+}
+
+/* Indicadores de Foco Acessíveis (:focus-visible) */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
